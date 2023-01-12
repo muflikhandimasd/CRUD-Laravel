@@ -16,3 +16,7 @@ use App\Http\Controllers\API\SiswaController;
 */
 
 Route::get('/siswa', [SiswaController::class, 'index']);
+Route::get('/siswa/{id}', [SiswaController::class, 'show']);
+Route::post('/siswa', [SiswaController::class, 'create']);
+Route::put('/siswa/{id}', [SiswaController::class, 'update']);
+Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);

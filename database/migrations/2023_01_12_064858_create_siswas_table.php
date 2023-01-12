@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('jenis_kelamin');
-            $table->integer('umur');
+            $table->string('umur');
             $table->string('alamat');
             $table->timestamps();
         });
