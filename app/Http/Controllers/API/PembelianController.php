@@ -126,7 +126,7 @@ class PembelianController extends Controller
         }
         return response()->json([
             'status' => true,
-            'pembeli' => $pembeli,
+            'data' => $pembeli,
 
 
         ]);
