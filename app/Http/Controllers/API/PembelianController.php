@@ -113,10 +113,22 @@ class PembelianController extends Controller
     public function getDataPembeli($id)
     {
 
-        $pembeli = Pembeli::find($id)->with('pembelians')->get();
+        $pembeli = Pembeli::with('pembelians')->find($id);
+
+        if (!$pembeli) {
+            return response()->json(
+                [
+                    'status' => false,
+                    'message' => 'pembeli not found'
+                ],
+                404
+            );
+        }
         return response()->json([
             'status' => true,
-            'data' => $pembeli
+            'pembeli' => $pembeli,
+
+
         ]);
     }
 }
