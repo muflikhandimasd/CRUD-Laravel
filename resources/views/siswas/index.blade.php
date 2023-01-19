@@ -10,9 +10,9 @@
         </tr>
         @foreach ($siswas as $siswa)
         <tr>
-<td>{{$siswa->nama}}</td>
-<td>{{$siswa->alamat}}</td>
-<td>{{$siswa->umur}} tahun</td>
+        <td>{{$siswa->nama}}</td>
+        <td>{{$siswa->alamat}}</td>
+        <td>{{$siswa->umur}} tahun</td>
         </tr>
         @endforeach
 
