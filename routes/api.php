@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\SiswaController;
+use App\Http\Controllers\API\PembelianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::get('/siswa/{id}', [SiswaController::class, 'show']);
 Route::post('/siswa', [SiswaController::class, 'create']);
 Route::put('/siswa/{id}', [SiswaController::class, 'update']);
 Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);
+Route::post('/barangs', [PembelianController::class, 'createBarang']);

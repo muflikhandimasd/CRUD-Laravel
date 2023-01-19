@@ -18,6 +18,7 @@ class SiswaController extends Controller
                 'data' => $siswas,
             ]
         );
+        // return 'ok';
     }
 
     public function show($id)
@@ -27,7 +28,7 @@ class SiswaController extends Controller
             return response()->json(
                 [
                     'status' => false,
-                    'message' => 'data not found'
+                    'message' => 'siswa not found'
                 ],
                 404
             );
